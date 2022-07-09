@@ -55,7 +55,7 @@ screen.onkeypress(onyx.rightwards, "Right")
 level = 1
 
 # Variable showing initial sleep() value for the game.
-time_delay = 0.5
+time_delay = 0.15
 
 # Create game over while loop.
 game_over = False
