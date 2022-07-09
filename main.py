@@ -87,9 +87,9 @@ while not game_over:
     for car in cars_starting_left:
         car.forward(20)     # 20 is the standard turtle length and width value.
 
-    # For every car in cars_starting_right list move car forward by -20 (ie. backwards).
+    # For every car in cars_starting_right list move car backwards by 20.
     for car in cars_starting_right:
-        car.forward(-20)    # 20 is the standard turtle length and width value.
+        car.backward(20)    # 20 is the standard turtle length and width value.
 
     # Detect collision by checking if 'onyx' is within 20 of 'car' object.
     for car in cars_all_created:
