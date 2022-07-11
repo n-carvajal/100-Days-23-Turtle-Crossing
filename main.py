@@ -95,12 +95,12 @@ while not game_over:
     # Detect collision by checking if 'onyx' is within 20 of 'car' object.
     for car in cars_all_created:
         if onyx.distance(car.position()) < 5:  # 20 is the standard turtle length and width value.
-            car_crash.play()
+            car_crash.play()    # Play car crash sound.
             game_over = True
 
     # Detect road crossed successfully if 'onyx' ycor() is equal to 338. Send 'onyx' back to start position.
     if onyx.ycor() == 338:  # 338 is the end y-coordinate position for 'onyx' on the screen.
-        crossing_success.play()
+        crossing_success.play()     # Play successful crossing sound.
         onyx.goto(0, -337)  # -337 is the start y-coordinate position for 'onyx' on the screen.
         time_delay *= 0.9   # 0.9 is a user defined value by which to decrease time delay.
         level += 1   # Increase level counter by 1.
