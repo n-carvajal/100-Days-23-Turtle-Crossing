@@ -23,6 +23,7 @@ mixer.music.play(-1)
 
 # Create sound objects for player movement and game over.
 car_crash = mixer.Sound("game_over.wav")
+crossing_success = mixer.Sound("success.wav")
 
 # Instantiate Scoreboard object.
 scoreboard = Scoreboard()
@@ -99,6 +100,7 @@ while not game_over:
 
     # Detect road crossed successfully if 'onyx' ycor() is equal to 338. Send 'onyx' back to start position.
     if onyx.ycor() == 338:  # 338 is the end y-coordinate position for 'onyx' on the screen.
+        crossing_success.play()
         onyx.goto(0, -337)  # -337 is the start y-coordinate position for 'onyx' on the screen.
         time_delay *= 0.9   # 0.9 is a user defined value by which to decrease time delay.
         level += 1   # Increase level counter by 1.
